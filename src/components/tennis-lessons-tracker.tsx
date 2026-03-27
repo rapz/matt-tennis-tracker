@@ -497,7 +497,7 @@ export default function TennisLessonsTracker() {
 
               <div className="grid grid-cols-7 gap-2">
                 {leadingBlanks.map((key) => (
-                  <div key={key} className="h-20 rounded-2xl bg-transparent" />
+                  <div key={key} className="min-h-20 rounded-2xl bg-transparent" />
                 ))}
 
                 {visibleMonthDays.map((date) => {
@@ -510,7 +510,7 @@ export default function TennisLessonsTracker() {
                       key={toKey(date)}
                       onClick={() => toggleAttendance(date)}
                       className={cn(
-                        "relative h-20 overflow-hidden rounded-2xl border p-3 text-left transition-all",
+                        "relative min-h-20 rounded-2xl border p-3 text-left transition-all",
                         "hover:-translate-y-0.5 hover:shadow-md",
                         canToggle ? "cursor-pointer" : "cursor-not-allowed opacity-50",
                         status === "normal" && "border-slate-200 bg-white",
